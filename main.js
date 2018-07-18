@@ -37,9 +37,8 @@ const btnDown = document.querySelector('.js-btn--minus');
 const btnUp = document.querySelector('.js-btn--plus');
 const valueBox = document.querySelector('.js-input--value');
 
-let limit = 32;
-
-let shiftValue = 1;
+const limit = 32;
+const shiftValue = 1;
 
 function valueUp() {
     
