@@ -1,7 +1,6 @@
 function encryptString() {
-    console.log(alphabet.length);
     let alphabet = ['a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'r', 's', 'ś', 't', 'u', 'w', 'x', 'y', 'z', 'ż', 'ź'];
-
+    
     const toCipher = document.querySelector('.js-input').value.toLowerCase();
     console.log(toCipher);
     let shiftingOfTheCipher = document.querySelector('.js-input--value').value;
