@@ -1,126 +1,225 @@
-body {
-    background-color: #F2F3EB;
+html
+{
     font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 62.5%;
+
+    background-color: #f2f3eb;
 }
 
-.container {
+@media only screen and (min-width: 75em)
+{
+    .container
+    {
+        min-width: 66%;
+    }
+}
+
+@media only screen and (max-width: 75em)
+{
+    html
+    {
+        font-size: 56.25%;
+    }
+
+    .container
+    {
+        min-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 56.25em)
+{
+    html
+    {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width: 37.5em)
+{
+    html
+    {
+        font-size: 37.5%;
+    }
+
+    .form__input
+    {
+        font-size: 1.4rem;
+    }
+
+    .input__button
+    {
+        font-size: 2rem;
+
+        padding: 1rem;
+    }
+
+    a.link
+    {
+        font-size: 1.8rem;
+    }
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+
+    max-height: 80vh;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+
     border: solid 3px #474544;
-    max-width: 768px;
-    margin: 60px auto;
 }
 
-.form {
+.form
+{
+    padding: 3rem;
+
     text-align: center;
-    padding: 37.5px;
-    margin: 50px 0;
 }
 
-.container__header {
-    margin-top: 80px;
-    color: #474544;
-    font-size: 32px;
+.container__header
+{
+    font-size: 3.2rem;
     font-weight: 800;
-    letter-spacing: 7px;
+
+    margin: 3rem 0;
+
     text-align: center;
+    letter-spacing: .7rem;
     text-transform: uppercase;
+
+    color: #474544;
 }
 
-.header__underline {
-    border-bottom: solid 2px #474544;
-    margin: -0.512em auto;
-    width: 80px;
-}
+.form__input
+{
+    font-size: 1.6rem;
+    font-weight: 400;
 
+    box-sizing: border-box;
+    width: 80%;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
 
-.form__input {
-    background: none;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #474544;
     border: none;
     border-bottom: solid 2px #474544;
-    color: #474544;
-    font-size: 1.000em;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin: 0em 0 1.875em 0;
-    padding: 0 0 0.875em 0;
-    text-transform: uppercase;
-    text-align: center;
-    width: 80%;
-    box-sizing: border-box;
+    background: none;
 }
 
-.form__input:focus {
+.form__input:focus
+{
     outline: none;
-    padding: 0 0 0.875em 0;
 }
 
 .encrypt,
-.encrypted {
+.encrypted
+{
     display: block;
+
     text-align: center;
 }
 
-.form__button {
-    letter-spacing: 2px;
-    background: none;
-    border: solid 2px #474544;
-    margin-bottom: 80px;
-    color: #474544;
-    cursor: pointer;
+.form__button
+{
+    font-size: 1.6rem;
+    font-weight: 800;
+
     display: inline-block;
-    font-size: 0.875em;
-    outline: none;
-    padding: 20px 35px;
+
+    width: 74%;
+    margin-bottom: 8rem;
+    padding: 2rem 3.5rem;
+
+    cursor: pointer;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    width: 80%;
+
+    color: #474544;
+    border: solid 2px #474544;
+    outline: none;
+    background: none;
 }
 
-.form__button:hover {
+.form__button:hover
+{
+    color: #f2f3eb;
     background-color: #474544;
-    color: #F2F3EB;
 }
 
-.form__input-box {
-    margin: 25px;
+.form__input-box
+{
     display: flex;
     flex-direction: row;
+
+    margin: 2.5rem;
+
     justify-content: space-evenly;
 }
 
-.form__input--shift {
+.form__input--shift
+{
     width: 50%;
 }
 
-.input__button {
-    line-height: 25px;
-    font-weight: 500; 
-    height: 25px;
-    width: 25px;
-    border: solid 2px #474544;
+.input__button
+{
     font-family: 'Arial';
+    font-weight: 500;
+    line-height: 2.5rem;
+
+    width: 25px;
+    height: 2.5rem;
+
     user-select: none;
+
+    border: solid 2px #474544;
 }
 
-.input__button:hover {
+.input__button:hover
+{
+    color: #f2f3eb;
     background-color: #474544;
-    color: #F2F3EB;
 }
 
-a {
-    max-width: 768px;
-    padding: 25px 0;
-    margin: 0 auto;
-    font-size: 14px;
+.link
+{
+    font-size: 1.333rem;
     font-weight: 800;
-    color: #474544;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+
     display: block;
+
+    max-width: 76.8rem;
+    margin: 0 auto;
+    padding: 1.25rem 5rem;
+
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
+
+    color: #474544;
     border: solid 3px #474544;
 }
 
-a:hover {
+.link:hover
+{
+    color: #f2f3eb;
     background-color: #474544;
-    color: #F2F3EB;
 }
