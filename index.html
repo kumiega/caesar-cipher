@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Szyfr cezara</title>
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,800" rel="stylesheet">
@@ -15,20 +14,19 @@
         <h1 class="container__header">&bull; Szyfr cezara &bull;</h1>
 
         <form class="form">
-
             <input class="form__input js-input" type="text" placeholder="wpisz wyrażenie, które chcesz zaszyfrować:" name="name" autocomplete="off" autofocus="">
 
             <div class="form__input-box">
-
                 <div class="input__button js-btn--minus">-</div>
-                <input class="form__input form__input--shift js-input--value" type="text" placeholder="wartość przesunięcia:" name="name" autocomplete="off" value="1">
+                <div class="form__input-value">
+                    <input id="shift-value" class="form__input form__input--shift js-input--value" type="text" name="shift-value" autocomplete="off" value="1">
+                    <label class="input-shift__label" for="shift-value">Wartość przesunięcia</label> 
+                </div>
                 <div class="input__button js-btn--plus">+</div>
-
             </div>
 
             <div class="form__button js-form__button">Szyfruj!</div>
             <input class="form__input js-input--result" type="text" placeholder="zaszyfrowana wiadomość:" name="encrypted">
-
         </form>
     </div>
 

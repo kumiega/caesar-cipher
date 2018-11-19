@@ -1,101 +1,39 @@
-html
-{
+html {
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 62.5%;
 
-    background-color: #f2f3eb;
 }
 
-@media only screen and (min-width: 75em)
-{
-    .container
-    {
-        min-width: 66%;
-    }
-}
-
-@media only screen and (max-width: 75em)
-{
-    html
-    {
-        font-size: 56.25%;
-    }
-
-    .container
-    {
-        min-width: 80%;
-    }
-}
-
-@media only screen and (max-width: 56.25em)
-{
-    html
-    {
-        font-size: 50%;
-    }
-}
-
-@media only screen and (max-width: 37.5em)
-{
-    html
-    {
-        font-size: 37.5%;
-    }
-
-    .form__input
-    {
-        font-size: 1.4rem;
-    }
-
-    .input__button
-    {
-        font-size: 2rem;
-
-        padding: 1rem;
-    }
-
-    a.link
-    {
-        font-size: 1.8rem;
-    }
-}
-
-body
-{
+body {
+    padding-top: 6vh;
     display: flex;
     flex-direction: column;
-
-    height: 100vh;
-
-    align-items: center;
     justify-content: center;
+    background-color: #f2f3eb;
+    box-sizing: border-box;
 }
 
-.container
-{
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.container {
     display: flex;
     flex-direction: column;
-
-    max-height: 80vh;
+    min-height: 0;
     margin: 0 auto;
-    margin-bottom: 10vh;
+    margin-bottom: 5rem;
 
     border: solid 3px #474544;
 }
 
-.form
-{
-    padding: 3rem;
-
-    text-align: center;
-}
-
-.container__header
-{
+.container__header {
     font-size: 3.2rem;
     font-weight: 800;
 
-    margin: 3rem 0;
+    margin-top: 5rem;
 
     text-align: center;
     letter-spacing: .7rem;
@@ -104,15 +42,20 @@ body
     color: #474544;
 }
 
-.form__input
-{
+.form {
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.form__input {
+    font-family: inherit;
     font-size: 1.6rem;
     font-weight: 400;
 
     box-sizing: border-box;
     width: 80%;
-    margin-bottom: 2.5rem;
     padding-bottom: 2rem;
+    margin-bottom: 5vh;
 
     text-align: center;
     letter-spacing: 1px;
@@ -124,29 +67,70 @@ body
     background: none;
 }
 
-.form__input:focus
-{
+.form__input:focus {
     outline: none;
 }
 
+.form__input-box {
+    margin: 0 auto;
+    max-width: 70%;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+}
+
+.form__input-value {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input--shift {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.input-shift__label {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.input__button {
+    font-family: 'Arial';
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+
+    width: 3.5rem;
+    height: 3.5rem;
+
+    user-select: none;
+
+    border: solid 2px #474544;
+}
+
+.input__button:hover {
+    color: #f2f3eb;
+    background-color: #474544;
+}
+
 .encrypt,
-.encrypted
-{
+.encrypted {
     display: block;
 
     text-align: center;
 }
 
-.form__button
-{
+.form__button {
     font-size: 1.6rem;
     font-weight: 800;
 
     display: inline-block;
 
     width: 74%;
-    margin-bottom: 8rem;
     padding: 2rem 3.5rem;
+    margin: 3vh 0 5rem;
 
     cursor: pointer;
     letter-spacing: 2px;
@@ -158,49 +142,12 @@ body
     background: none;
 }
 
-.form__button:hover
-{
+.form__button:hover {
     color: #f2f3eb;
     background-color: #474544;
 }
 
-.form__input-box
-{
-    display: flex;
-    flex-direction: row;
-
-    margin: 2.5rem;
-
-    justify-content: space-evenly;
-}
-
-.form__input--shift
-{
-    width: 50%;
-}
-
-.input__button
-{
-    font-family: 'Arial';
-    font-weight: 500;
-    line-height: 2.5rem;
-
-    width: 25px;
-    height: 2.5rem;
-
-    user-select: none;
-
-    border: solid 2px #474544;
-}
-
-.input__button:hover
-{
-    color: #f2f3eb;
-    background-color: #474544;
-}
-
-.link
-{
+.link {
     font-size: 1.333rem;
     font-weight: 800;
 
@@ -218,8 +165,53 @@ body
     border: solid 3px #474544;
 }
 
-.link:hover
-{
+.link:hover {
     color: #f2f3eb;
     background-color: #474544;
+}
+
+/* RESPONSIVE STYLES */
+
+@media only screen and (min-width: 75em) {
+    .container {
+        min-width: 66%;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .container {
+        min-width: 80%;
+    }
+
+    .form__input-box {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    html {
+        font-size: 37.5%;
+    }
+
+    .form__input {
+        font-size: 1.4rem;
+    }
+
+    .input__button {
+        font-size: 2rem;
+    }
+
+    a.link {
+        font-size: 1.8rem;
+    }
 }
